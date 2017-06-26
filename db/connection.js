@@ -1,9 +1,9 @@
-const environment = process.env.NODE_ENV || "development";
-const config = require("../knexfile");
+const environment = 'development';
+//gets you access to db through knex file
+const config = require('../knexfile.js');
 const environmentConfig = config[environment];
-const knex = require("knex");
-const connection = knex[environmentConfig];
+//give knex the config to run
+const knex = require('knex');
+const connection = knex(environmentConfig);
 
-module.exports = require("knex")[require("../knexfile")["development"]]
-
-// module.exports = connection;
+module.exports = connection;

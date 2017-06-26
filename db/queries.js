@@ -2,6 +2,6 @@ const knex = require("./connection");
 
 module.exports = {
   getAll: function() {
-    return knex("users");
+    return knex("user_table");
   }
 }
