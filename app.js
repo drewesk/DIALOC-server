@@ -1,16 +1,18 @@
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
-var cors = require('cors');
 
-var index = require('./routes/index');
-var user = require('./routes/user');
-var auth = require('./auth'); //shorthand for ./auth/index.js
+const express = require('express');
+const path = require('path');
+const favicon = require('serve-favicon');
+const logger = require('morgan');
+const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
+const cors = require('cors');
 
-var app = express();
+const index = require('./routes/index');
+const auth = require('./auth'); //shorthand for ./auth/index.js
+const users = require("./routes/user")
+
+
+const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -27,7 +29,7 @@ app.use(cors());
 
 app.use('/auth', auth);
 app.use('/', index);
-app.use('/user', user);
+app.use('/users', users);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
