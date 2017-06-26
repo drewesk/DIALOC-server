@@ -7,7 +7,7 @@ exports.up = function(knex, Promise) {
     table.integer("location_b_id").unsigned();
     table.foreign("location_b_id").references("location_table.id")
     table.integer("user_id").unsigned();
-    table.foreign("user_id").references("user_table.id")
+    table.foreign("user_id").references("user.id")
   });
 };
 
