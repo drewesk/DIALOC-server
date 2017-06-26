@@ -55,11 +55,11 @@ router.post('/login', (req, res, next) => {
               if (result) {
 
                 const isSecure = req.app.get('env') != 'development';
-                res.cookie('user_id', user.id, {
-                  httpOnly: true,
-                  secure: isSecure,
-                  signed: true
-                });
+                // res.cookie('user_id', user.id, {
+                //   httpOnly: true,
+                //   secure: isSecure,
+                //   signed: true
+                // });
 
                 res.json({
                   result,
