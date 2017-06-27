@@ -5,6 +5,7 @@ const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const dotenv = require('dotenv');
 
 const auth = require('./auth'); //shorthand for ./auth/index.js
 const users = require("./routes/user")
