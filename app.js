@@ -21,9 +21,12 @@ app.set('view engine', 'hbs');
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-// app.use(cookieParser(process.env.COOKIE_SECRET));
+app.use(cookieParser('mmmmmm'));
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(cors());
+app.use(cors({
+  origin: 'http://localhost:8080',
+  credentials: true
+}));
 
 app.use('/auth', auth);
 app.use('/users', users);
