@@ -13,6 +13,10 @@ const users = require("./routes/user")
 
 const app = express();
 
+// const URL = "https://dialoc-e341d.firebaseapp.com/";
+const URL = "http://localhost:8080";
+
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
@@ -22,10 +26,10 @@ app.set('view engine', 'hbs');
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser('mmmmmm'));
+app.use(cookieParser(process.env.COOKIE_SECRET));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors({
-  origin: 'http://localhost:8080',
+  origin: URL, // change to the firebase client front end to set the cookie
   credentials: true
 }));
 
