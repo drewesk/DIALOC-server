@@ -20,9 +20,11 @@ module.exports = {
        "*").then( function (locationData) {
          return knex('antipode_table').insert({
            user_id: id,
-           location_a_id: locationData.id,
-           location_b_id: locationData.id,
-         })
+           location_a_id: locationData[0].id,
+           location_b_id: locationData[0].id
+         }, "*").then( function(antipodeData) {
+           return antipodeData;
+         });
        });
   }
 
