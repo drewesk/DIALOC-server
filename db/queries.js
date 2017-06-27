@@ -17,8 +17,12 @@ module.exports = {
 
   createAntipode: (id, reqBody) => {
     return knex('location_table').insert({ latitude: reqBody.latitude, longitude: reqBody.longitude, description: reqBody.description },
-       "*").then( function (testResult) {
-         return testResult;
+       "*").then( function (locationData) {
+         return knex('antipode_table').insert({
+           user_id: id,
+           location_a_id: locationData.id,
+           location_b_id: locationData.id,
+         })
        });
   }
 
