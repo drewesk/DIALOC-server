@@ -14,7 +14,7 @@ const users = require("./routes/user")
 const app = express();
 
 // const URL = "https://dialoc-e341d.firebaseapp.com/";
-// const URL = "http://localhost:8080";
+const URL = "http://localhost:8080";
 
 
 // view engine setup
@@ -29,7 +29,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser(process.env.COOKIE_SECRET));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors({
-  origin: 'https://dialoc-e341d.firebaseapp.com/', // change to the firebase client front end to set the cookie
+  origin: URL, // change to the firebase client front end to set the cookie
   credentials: true
 }));
 
