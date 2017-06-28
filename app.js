@@ -14,7 +14,7 @@ const users = require("./routes/user")
 const app = express();
 
 // const URL = "https://dialoc-e341d.firebaseapp.com/";
-const URL = "http://localhost:8080";
+// const URL = "http://localhost:8080";
 
 
 // view engine setup
