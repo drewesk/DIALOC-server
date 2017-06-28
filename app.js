@@ -29,7 +29,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser(process.env.COOKIE_SECRET));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors({
-  origin: URL, // change to the firebase client front end to set the cookie
+  origin: 'https://dialoc-e341d.firebaseapp.com/', // change to the firebase client front end to set the cookie
   credentials: true
 }));
 
