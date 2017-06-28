@@ -82,7 +82,8 @@ password: '',
 
 ```
 
-> Get Antipode by id: GET to `/users/antipodes`, with the output
+
+> Get All Antipodes: GET to `/users/antipodes`, with the output
 
 ```
 [{
@@ -130,3 +131,4 @@ password: '',
 
 
 ```
+
