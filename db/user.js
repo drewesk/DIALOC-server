@@ -3,7 +3,7 @@ const knex = require('../connection');
 // queries for users
 
 module.exports = {
-  getOne: (id) => {
+  getOneByID: (id) => {
     return knex('user').where('id', id).first();
   },
   getOneByEmail: (email) => {
