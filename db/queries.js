@@ -26,6 +26,12 @@ module.exports = {
            return antipodeData;
          });
        });
+  },
+
+  getUserAntipodes : function (id) {
+    return knex("antipode_table")
+    .join("location_table", "location_a_id", "location_table.id")
+    .select("*").where("antipode_table.user_id", id)
   }
 
 }

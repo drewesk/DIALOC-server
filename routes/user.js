@@ -21,5 +21,11 @@ router.post('/:id', (req, res, next) => {
   });
 });
 
+router.get('/:id/antipodes', (req, res, next) => {
+  queries.getUserAntipodes(req.params.id).then((antipodes) => {
+    res.json(antipodes);
+  });
+});
+
 
 module.exports = router;
