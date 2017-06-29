@@ -9,24 +9,29 @@
 > Create a user: POST to `/auth/signup`, with the body:
 
 ```
+
 {
 	"name": "bartholomew",
 	"email": "santiago@email.com",
 	"password": "mustbeatleast6char"
 }
+
 ```
 > Login as an athenticated user: POST to `/auth/login`, with the body:
 
 ```
+
 {
 	"email": "santiago@email.com",
 	"password": "mustbeatleast6char"
 }
+
 ```
 
 > All Users: GET to `/users`, with the response output:
 
 ```
+
 [
   {
     "id": 2,
@@ -56,9 +61,10 @@
 
 ```
 
-> One User by id: GET to `/users/``4`, with the response output:
+> One User by id: GET to `/users/{user id here}`, with the response output:
 
 ```
+
 "id": 4,
 "name": "bananas",
 "email": "bananas@example.com",
@@ -69,9 +75,10 @@
 
 # Antipodes
 
-> Create an Antipode by id: Post to `locations/``{user id goes here}` , with the body:
+> Create an Antipode by id: Post to `locations/{user id goes here}`, with the body:
 
 ```
+
 {
     "latitude": 100.54645,
     "longitude": 200.23424,
@@ -80,9 +87,10 @@
 
 ```
 
-> Get Antipode by user_id: GET to `locations/``1``/antipodes`, with the output:
+> Get Antipode by user_id: GET to `locations/{user id goes here}/antipodes`, with the output:
 
 ```
+
 [{
     "id": 1,
     "location_id": 1,
@@ -106,6 +114,7 @@
 > Get All Antipodes: GET to `/locations/antipodes`, with the output
 
 ```
+
 [{
     "id": 1,
     "location_a_id": 1,
