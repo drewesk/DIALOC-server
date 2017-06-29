@@ -98,7 +98,7 @@
 ```
 
 
-> Get All Antipodes: GET to `/locations/antipodes`, with the output
+> Get All Antipodes: GET to `/locations/antipodes`, with the response output:
 
 ```
 
