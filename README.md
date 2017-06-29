@@ -34,25 +34,13 @@
 
 [
   {
-    "id": 2,
-    "name": "CJ",
-    "email": "hello@cjr.co.de",
-    "is_active": true
-  },
-  {
-    "id": 3,
+    "id": 1,
     "name": "testing",
     "email": "test@test.com",
     "is_active": true
   },
   {
-    "id": 1,
-    "name": "Rob",
-    "email": "berto.ort@gmail.com",
-    "is_active": true
-  },
-  {
-    "id": 4,
+    "id": 2,
     "name": "bananas",
     "email": "bananas@example.com",
     "is_active": true
@@ -68,9 +56,8 @@
 "id": 4,
 "name": "bananas",
 "email": "bananas@example.com",
-"password": "$2a$08$mzucwDsDpwcHBrG1CettQekm1quppa3rmxXPjTmMwNIf/VVBb.Biu",
 "is_active": true,
-"created_at": "2017-06-29T15:57:08.091Z"
+
 ```
 
 # Antipodes
@@ -117,9 +104,7 @@
 
 [{
     "id": 1,
-    "location_a_id": 1,
-    "location_b_id": 1,
-    "favorite": false,
+    "location_id": 4,
     "user_id": 1,
     "latitude": 100.54645,
     "longitude": 200.23424,
@@ -127,9 +112,7 @@
   },
   {
     "id": 2,
-    "location_a_id": 1,
-    "location_b_id": 1,
-    "favorite": false,
+    "location_id": 3,
     "user_id": 1,
     "latitude": -100.76565,
     "longitude": -200.34534,
@@ -138,9 +121,7 @@
 
   [{
     "id": 3,
-    "location_a_id": 1,
-    "location_b_id": 1,
-    "favorite": false,
+    "location_id": 2,
     "user_id": 2,
     "latitude": -100.76565,
     "longitude": -200.34534,
@@ -149,9 +130,7 @@
 
   [{
     "id": 4,
-    "location_a_id": 1,
-    "location_b_id": 1,
-    "favorite": false,
+    "location_id": 1,
     "user_id": 2,
     "latitude": -100.76565,
     "longitude": -200.34534,
