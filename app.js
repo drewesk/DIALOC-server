@@ -36,7 +36,7 @@ app.use(cors({
 
 app.use('/auth', auth);
 app.use('/users', users);
-app.use('/antipodes', antipodes);
+app.use('/locations', antipodes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
