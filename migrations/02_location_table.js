@@ -5,7 +5,7 @@ exports.up = function(knex, Promise) {
     table.increments("id").primary();
     table.float("latitude").notNullable();
     table.float("longitude").notNullable();
-    table.text("description").notNullable();
+    table.text("description");
 
   });
 };

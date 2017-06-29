@@ -7,7 +7,7 @@ module.exports = {
 
   getAntipodes: function() {
     return knex("antipode_table")
-    // .join("location_table", "location_id", "location_table.id")
+    .join("location_table", "location_id", "location_table.id")
     .select("*");
   },
 
@@ -20,8 +20,7 @@ module.exports = {
        "*").then( function (locationData) {
          return knex('antipode_table').insert({
            user_id: id,
-           location_a_id: locationData[0].id,
-           location_b_id: locationData[0].id
+           location_id: locationData[0].id,
          }, "*").then( function(antipodeData) {
            return antipodeData;
          });
@@ -30,7 +29,7 @@ module.exports = {
 
   getUserAntipodes : function (id) {
     return knex("antipode_table")
-    .join("location_table", "location_a_id", "location_table.id")
+    .join("location_table", "location_id", "location_table.id")
     .select("*").where("antipode_table.user_id", id)
  }
 

@@ -14,9 +14,6 @@ const antipodes = require("./routes/antipode")
 
 const app = express();
 
-// const URL = "https://dialoc-e341d.firebaseapp.com/";
-// const URL = "http://localhost:8080";
-
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -30,7 +27,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser(process.env.COOKIE_SECRET));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors({
-  origin: process.env.CORS_ORIGIN, // change to the firebase client front end to set the cookie
+  origin: process.env.CORS_ORIGIN, 
   credentials: true
 }));
 

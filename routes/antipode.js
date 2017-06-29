@@ -3,7 +3,7 @@ const router = express.Router();
 const queries = require("../db/queries");
 const userQueries = require("../db/user");
 
-router.get('/antipodeList', (req, res, next) => {
+router.get('/antipodes', (req, res, next) => {
   queries.getAntipodes().then((antipodes) => {
     res.json(antipodes);
   });
