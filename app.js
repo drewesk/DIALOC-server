@@ -9,12 +9,10 @@ const dotenv = require('dotenv');
 
 const auth = require('./auth'); //shorthand for ./auth/index.js
 const users = require("./routes/user")
+const antipodes = require("./routes/antipode")
 
 
 const app = express();
-
-// const URL = "https://dialoc-e341d.firebaseapp.com/";
-// const URL = "http://localhost:8080";
 
 
 // view engine setup
@@ -29,12 +27,13 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser(process.env.COOKIE_SECRET));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors({
-  origin: process.env.CORS_ORIGIN, // change to the firebase client front end to set the cookie
+  origin: process.env.CORS_ORIGIN, 
   credentials: true
 }));
 
 app.use('/auth', auth);
 app.use('/users', users);
+app.use('/locations', antipodes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
