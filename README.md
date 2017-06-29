@@ -29,36 +29,28 @@
 ```
 [
   {
-    "id": 1,
-    "name": "Rob",
-    "email": "berto.ort@gmail.com",
-    "password": "$2a$10$SU7mFFQgJBbTpZqIeteFpuvgj7kdi8M8HpWYqpx7Ke6CVkQ/KCYzq",
-    "is_active": true,
-    "created_at": "2017-06-29T15:53:53.626Z"
-  },
-  {
     "id": 2,
     "name": "CJ",
     "email": "hello@cjr.co.de",
-    "password": "$2a$10$CfeM8yeBYj4S5uBmbgmolOMNX.xCXlQM7wwnEioxTuBhsFh1Kmh3W",
-    "is_active": true,
-    "created_at": "2017-06-29T15:53:53.716Z"
+    "is_active": true
   },
   {
     "id": 3,
     "name": "testing",
     "email": "test@test.com",
-    "password": "$2a$10$PISyRYWWL.o3Lug4edUX3Ontw7/swcL5PrR9U.OwtbVKKNS6qVgv.",
-    "is_active": true,
-    "created_at": "2017-06-29T15:53:53.804Z"
+    "is_active": true
+  },
+  {
+    "id": 1,
+    "name": "Rob",
+    "email": "berto.ort@gmail.com",
+    "is_active": true
   },
   {
     "id": 4,
     "name": "bananas",
     "email": "bananas@example.com",
-    "password": "$2a$08$mzucwDsDpwcHBrG1CettQekm1quppa3rmxXPjTmMwNIf/VVBb.Biu",
-    "is_active": true,
-    "created_at": "2017-06-29T15:57:08.091Z"
+    "is_active": true
   }
 ]
 

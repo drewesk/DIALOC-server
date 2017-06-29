@@ -2,7 +2,8 @@ const knex = require("../connection");
 
 module.exports = {
   getAll: function() {
-    return knex("user");
+    return knex("user")
+    .distinct('id', 'name', 'email', 'is_active');
   },
 
   getAntipodes: function() {

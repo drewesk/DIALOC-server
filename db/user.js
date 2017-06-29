@@ -1,7 +1,5 @@
 const knex = require('../connection');
 
-// queries for users
-
 module.exports = {
   getOneByID: (id) => {
     return knex('user').where('id', id).first();
