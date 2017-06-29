@@ -81,3 +81,54 @@ password: '',
   }];
 
 ```
+
+
+> Get All Antipodes: GET to `/users/antipodes`, with the output
+
+```
+[{
+    "id": 1,
+    "location_a_id": 1,
+    "location_b_id": 1,
+    "favorite": false,
+    "user_id": 1,
+    "latitude": 100.54645,
+    "longitude": 200.23424,
+    "description": 'WAAAAT'
+  },
+  {
+    "id": 2,
+    "location_a_id": 1,
+    "location_b_id": 1,
+    "favorite": false,
+    "user_id": 1,
+    "latitude": -100.76565,
+    "longitude": -200.34534,
+    "description": 'WAAAAT'
+  }],
+
+  [{
+    "id": 3,
+    "location_a_id": 1,
+    "location_b_id": 1,
+    "favorite": false,
+    "user_id": 2,
+    "latitude": -100.76565,
+    "longitude": -200.34534,
+    "description": 'WAAAAT'
+    }],
+
+  [{
+    "id": 4,
+    "location_a_id": 1,
+    "location_b_id": 1,
+    "favorite": false,
+    "user_id": 2,
+    "latitude": -100.76565,
+    "longitude": -200.34534,
+    "description": 'WAAAAT'
+  }];
+
+
+```
+
