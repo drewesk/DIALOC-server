@@ -1,8 +1,8 @@
 const bcrypt = require('bcryptjs');
 
-exports.seed = (knex, Promise) => {
-    return knex.raw('DELETE FROM "user"; ALTER SEQUENCE user_id_seq RESTART WITH 3')
-      .then(() => {
+exports.seed = function(knex, Promise) {
+  return knex.raw('TRUNCATE "user" RESTART IDENTITY CASCADE;')
+  .then(() => {
         const users = [
           {
             id: 1,
@@ -16,6 +16,13 @@ exports.seed = (knex, Promise) => {
             name: 'CJ',
             email: 'hello@cjr.co.de',
             password: bcrypt.hashSync('keyboard_cat'),
+            created_at: new Date()
+          },
+          {
+            id: 3,
+            name: 'testing',
+            email: 'test@test.com',
+            password: bcrypt.hashSync('testpass'),
             created_at: new Date()
           }
         ]

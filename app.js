@@ -9,6 +9,7 @@ const dotenv = require('dotenv');
 
 const auth = require('./auth'); //shorthand for ./auth/index.js
 const users = require("./routes/user")
+const antipodes = require("./routes/antipode")
 
 
 const app = express();
@@ -35,6 +36,7 @@ app.use(cors({
 
 app.use('/auth', auth);
 app.use('/users', users);
+app.use('/antipodes', antipodes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
